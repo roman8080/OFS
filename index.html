@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-:root {
-  --d: 700ms;
-  --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
+
+.material-symbols-outlined {
+  font-size: 50px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 0,
+  'opsz' 40
 }
+
+      @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+      :root {
+        --d: 700ms;
+        --e: cubic-bezier(0.19, 1, 0.22, 1);
+        --font-sans: "Rubik", sans-serif;
+        --font-serif: "Cardo", serif;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -66,235 +77,330 @@
       .about {
         background-color: black;
         height: 100vh;
+        display: flex;
+
+        padding: 0;
       }
       .about h1 {
         color: wheat;
         font-size: 3rem;
-        text-align: center;
+        padding: 1rem;
       }
       .about img {
         align-items: center;
-        width: 80%;
+        width: 250%;
+
         padding: 1% 10%;
       }
       .about p {
         color: antiquewhite;
-        font-size: 1.5rem;
+        font-size: 3rem;
       }
       .sec2 {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
       }
-      .sec2 img {
-        border: 2px solid burlywood;
+
+      .sec2 p {
+        font-size: 1rem;
+        padding: 0 2rem;
       }
-      
+
+      .sec2 h1 {
+        font-size: 3rem;
+        padding: 0 2rem;
+      }
+
+      .sec2 h3 {
+        font-size: 2rem;
+        padding: 0 2rem;
+        color: white;
+      }
+
+      .about-image {
+        background-image: url(https://previews.123rf.com/images/pressmaster/pressmaster1603/pressmaster160301001/54234612-tailor-with-measuring-tape-taking-measures-of-jacket-on-mannequin.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .about > div {
+        flex: 1;
+      }
+
       .card {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 1rem;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        padding: 1rem;
 
-  text-align: center;
-  color: whitesmoke;
-  background-color: whitesmoke;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
-}
-@media (min-width: 600px) {
-  .card {
-    height: 350px;
-  }
-}
-.card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-size: cover;
-  background-position: 0 0;
-  transition: transform calc(var(--d) * 1.5) var(--e);
-  pointer-events: none;
-}
-.card:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  pointer-events: none;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
-  transform: translateY(-50%);
-  transition: transform calc(var(--d) * 2) var(--e);
-}
-.card:nth-child(1):before {
-  background-image: url(https://img4.dhresource.com/webp/m/0x0/f3/albu/km/o/15/6d06e550-5b48-4fcd-8bde-5198525e73b4.jpg);
-  background-position: center;
-}
-.card:nth-child(2):before {
-  background-image: url(https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/7717/70463/Jacket-Vest-Pants-2018-High-quality-Men-Suits-Fashion-grid-stripe-Men-s-Slim-Fit__71054.1602670899.jpg?c=2);
-  background-position: center;
-}
-.card:nth-child(3):before {
-  background-image: url(https://d2j6dbq0eux0bg.cloudfront.net/images/42740142/2778699589.jpg);
-  background-position: center;
-}
-.card:nth-child(4):before {
-  background-image: url(https://media.karousell.com/media/photos/products/2023/9/10/mens_bespoke_suits_1694333499_7d22fe84.jpg);
-  background-position: center;
-}
-.card:nth-child(5):before {
-  background-image: url(https://ae01.alicdn.com/kf/Sf16f2efa7ab94a73856c4c7245b1896am/Men-s-Business-Casual-Suits-Sets-Men-Three-Piece-Suit-Three-Separate-Set-Male-Vest-Blazers.jpg);
-  background-position: center;
-}
-.card:nth-child(6):before {
-  background-image: url(https://5.imimg.com/data5/UI/AX/ZB/ANDROID-17267529/product-jpeg.jpg);
-  background-position: center;
-}
-.card:nth-child(7):before {
-  background-image: url(https://5.imimg.com/data5/VQ/BD/FT/SELLER-106805690/mens-5-piece-party-wear-suit-500x500.jpg);
-  background-position: center;
-}
-.card:nth-child(8):before {
-  background-image: url(https://ahlabuy.com/img/p/1/0/9/2/3/6/6/1092366-large_default.jpg);
-  background-position: center;
-}
+        text-align: center;
+        color: whitesmoke;
+        background-color: whitesmoke;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+          0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+          0 16px 16px rgba(0, 0, 0, 0.1);
+      }
+      @media (min-width: 600px) {
+        .card {
+          height: 350px;
+        }
+      }
+      .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        background-size: cover;
+        background-position: 0 0;
+        transition: transform calc(var(--d) * 1.5) var(--e);
+        pointer-events: none;
+      }
+      .card:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        pointer-events: none;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.009) 11.7%,
+          rgba(0, 0, 0, 0.034) 22.1%,
+          rgba(0, 0, 0, 0.072) 31.2%,
+          rgba(0, 0, 0, 0.123) 39.4%,
+          rgba(0, 0, 0, 0.182) 46.6%,
+          rgba(0, 0, 0, 0.249) 53.1%,
+          rgba(0, 0, 0, 0.32) 58.9%,
+          rgba(0, 0, 0, 0.394) 64.3%,
+          rgba(0, 0, 0, 0.468) 69.3%,
+          rgba(0, 0, 0, 0.54) 74.1%,
+          rgba(0, 0, 0, 0.607) 78.8%,
+          rgba(0, 0, 0, 0.668) 83.6%,
+          rgba(0, 0, 0, 0.721) 88.7%,
+          rgba(0, 0, 0, 0.762) 94.1%,
+          rgba(0, 0, 0, 0.79) 100%
+        );
+        transform: translateY(-50%);
+        transition: transform calc(var(--d) * 2) var(--e);
+      }
+      .card:nth-child(1):before {
+        background-image: url(https://img4.dhresource.com/webp/m/0x0/f3/albu/km/o/15/6d06e550-5b48-4fcd-8bde-5198525e73b4.jpg);
+        background-position: center;
+      }
+      .card:nth-child(2):before {
+        background-image: url(https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/7717/70463/Jacket-Vest-Pants-2018-High-quality-Men-Suits-Fashion-grid-stripe-Men-s-Slim-Fit__71054.1602670899.jpg?c=2);
+        background-position: center;
+      }
+      .card:nth-child(3):before {
+        background-image: url(https://d2j6dbq0eux0bg.cloudfront.net/images/42740142/2778699589.jpg);
+        background-position: center;
+      }
+      .card:nth-child(4):before {
+        background-image: url(https://media.karousell.com/media/photos/products/2023/9/10/mens_bespoke_suits_1694333499_7d22fe84.jpg);
+        background-position: center;
+      }
+      .card:nth-child(5):before {
+        background-image: url(https://ae01.alicdn.com/kf/Sf16f2efa7ab94a73856c4c7245b1896am/Men-s-Business-Casual-Suits-Sets-Men-Three-Piece-Suit-Three-Separate-Set-Male-Vest-Blazers.jpg);
+        background-position: center;
+      }
+      .card:nth-child(6):before {
+        background-image: url(https://5.imimg.com/data5/UI/AX/ZB/ANDROID-17267529/product-jpeg.jpg);
+        background-position: center;
+      }
+      .card:nth-child(7):before {
+        background-image: url(https://5.imimg.com/data5/VQ/BD/FT/SELLER-106805690/mens-5-piece-party-wear-suit-500x500.jpg);
+        background-position: center;
+      }
+      .card:nth-child(8):before {
+        background-image: url(https://ahlabuy.com/img/p/1/0/9/2/3/6/6/1092366-large_default.jpg);
+        background-position: center;
+      }
 
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
-  transition: transform var(--d) var(--e);
-  z-index: 1;
-}
-.content > * + * {
-  margin-top: 1rem;
-}
 
-.title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
+      .card.women-1:before {
+        background-image: url(https://cdn.shopify.com/s/files/1/1025/3059/products/WOMENS_TEXTURED_GRAY_ELLA__089_9839c2ff-a0a7-44c3-aeeb-677483c89e02_900x1250_crop_center.jpg?v=1698898978) !important;
+        background-position: center;
+      }
+      .card.women-2:before {
+        background-image: url(https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/7717/70463/Jacket-Vest-Pants-2018-High-quality-Men-Suits-Fashion-grid-stripe-Men-s-Slim-Fit__71054.1602670899.jpg?c=2) !important;
+        background-position: center;
+      }
+      .card.women-3:before {
+        background-image: url(https://d2j6dbq0eux0bg.cloudfront.net/images/42740142/2778699589.jpg) !important; 
+        background-position: center;
+      }
 
-.copy {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  font-style: italic;
-  line-height: 1.35;
-}
+      
 
-.btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-.btn:hover {
-  background-color: #0d0d0d;
-}
-.btn:focus {
-  outline: 1px dashed yellow;
-  outline-offset: 3px;
-}
+      .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        transition: transform var(--d) var(--e);
+        z-index: 1;
+      }
+      .content > * + * {
+        margin-top: 1rem;
+      }
 
-@media (hover: hover) and (min-width: 600px) {
-  .card:after {
-    transform: translateY(0);
-  }
+      .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 1.2;
+      }
 
-  .content {
-    transform: translateY(calc(100% - 4.5rem));
-  }
-  .content > *:not(.title) {
-    opacity: 0;
-    transform: translateY(1rem);
-    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
-  }
+      .copy {
+        font-family: var(--font-serif);
+        font-size: 1.125rem;
+        font-style: italic;
+        line-height: 1.35;
+      }
 
-  .card:hover,
-.card:focus-within {
-    align-items: center;
-  }
-  .card:hover:before,
-.card:focus-within:before {
-    transform: translateY(-4%);
-  }
-  .card:hover:after,
-.card:focus-within:after {
-    transform: translateY(-50%);
-  }
-  .card:hover .content,
-.card:focus-within .content {
-    transform: translateY(0);
-  }
-  .card:hover .content > *:not(.title),
-.card:focus-within .content > *:not(.title) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(var(--d) / 8);
-  }
+      .btn {
+        cursor: pointer;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.65rem;
+        font-weight: bold;
+        letter-spacing: 0.025rem;
+        text-transform: uppercase;
+        color: white;
+        background-color: black;
+        border: none;
+      }
+      .btn:hover {
+        background-color: #0d0d0d;
+      }
+      .btn:focus {
+        outline: 1px dashed yellow;
+        outline-offset: 3px;
+      }
 
-  .card:focus-within:before, .card:focus-within:after,
-.card:focus-within .content,
-.card:focus-within .content > *:not(.title) {
-    transition-duration: 0s;
-  }
-}
+      @media (hover: hover) and (min-width: 600px) {
+        .card:after {
+          transform: translateY(0);
+        }
 
-.cards {
-    display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
-  font-family: var(--font-sans);
-}
+        .content {
+          transform: translateY(calc(100% - 4.5rem));
+        }
+        .content > *:not(.title) {
+          opacity: 0;
+          transform: translateY(1rem);
+          transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+        }
 
-@media (min-width: 600px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 800px) {
-  .cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.product {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: black;
-}
+        .card:hover,
+        .card:focus-within {
+          align-items: center;
+        }
+        .card:hover:before,
+        .card:focus-within:before {
+          transform: translateY(-4%);
+        }
+        .card:hover:after,
+        .card:focus-within:after {
+          transform: translateY(-50%);
+        }
+        .card:hover .content,
+        .card:focus-within .content {
+          transform: translateY(0);
+        }
+        .card:hover .content > *:not(.title),
+        .card:focus-within .content > *:not(.title) {
+          opacity: 1;
+          transform: translateY(0);
+          transition-delay: calc(var(--d) / 8);
+        }
 
-.title {
-    background-image: url(https://png.klev.club/uploads/posts/2024-04/png-klev-club-ydjq-p-uzori-zoloto-png-21.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-h2.title {
-    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
-}
+        .card:focus-within:before,
+        .card:focus-within:after,
+        .card:focus-within .content,
+        .card:focus-within .content > *:not(.title) {
+          transition-duration: 0s;
+        }
+      }
+
+      .cards {
+        display: grid;
+        grid-gap: 1rem;
+        padding: 1rem;
+        max-width: 1024px;
+        margin: 0 auto;
+        font-family: var(--font-sans);
+      }
+
+      @media (min-width: 600px) {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 800px) {
+        .cards {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .product {
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: white;
+      }
+
+      .title {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      h2.title {
+        background: linear-gradient(
+          to bottom,
+          #cfc09f 27%,
+          #ffecb3 40%,
+          #3a2c0f 78%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #fff;
+      }
+      footer {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5rem;
+        gap: 2rem;
+        color: white;
+        background-color: black;
+      }
+      footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .product h1 {
+        color: wheat;
+        text-align: center;
+        margin: 5rem 0;
+        font-size: 4rem;
+      }
+
+      footer div p {
+        letter-spacing: 2px;
+      }
     </style>
   </head>
   <body>
@@ -312,7 +418,7 @@ h2.title {
     </header>
     <main>
       <section class="hero">
-        <h1>Crafted</h1>
+        <h1>OFS PRODUCTION</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. In ullam
           possimus fugiat consequuntur alias magnam, accusantium, quo
@@ -321,90 +427,238 @@ h2.title {
         </p>
       </section>
       <section class="about">
-        <!-- <img
-          src="https://png.klev.club/uploads/posts/2024-04/png-klev-club-ydjq-p-uzori-zoloto-png-21.png"
-          alt=""
-        /> -->
-        <h1 class="title">ABOUT US</h1>
         <div class="sec2">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-            reprehenderit temporibus similique. Quisquam non distinctio suscipit
-            molestiae esse. Quo fugit asperiores magnam, officiis quaerat iusto
-            ab commodi ipsa. Eveniet, saepe?
-          </p>
-          <img
-            src="https://images.virginexperiencedays.co.uk/images/product/main/semibespoke-tailored-gentlemans-suit-30105629.jpg?auto=compress%2Cformat&w=1920&q=50&fit=max"
-            alt=""
-          />
+          <h1 class="title">ABOUT US</h1>
+          <div>
+            <h3>Title 1</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+              reprehenderit temporibus similique. Quisquam non distinctio
+              suscipit molestiae esse. Quo fugit asperiores magnam, officiis
+              quaerat iusto ab commodi ipsa. Eveniet, saepe?
+            </p>
+          </div>
+          <div>
+            <h3>Title 1</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+              reprehenderit temporibus similique. Quisquam non distinctio
+              suscipit molestiae esse. Quo fugit asperiores magnam, officiis
+              quaerat iusto ab commodi ipsa. Eveniet, saepe?
+            </p>
+          </div>
+          <div>
+            <h3>Title 1</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+              reprehenderit temporibus similique. Quisquam non distinctio
+              suscipit molestiae esse. Quo fugit asperiores magnam, officiis
+              quaerat iusto ab commodi ipsa. Eveniet, saepe?
+            </p>
+          </div>
         </div>
+
+        <div class="about-image"></div>
       </section>
       <section class="product">
+        <h1>Mens Products</h1>
         <div class="cards">
-            <div class="card">
-                <div class="content">
-                  <h2 class="title">Mans Suite Slim Fit</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
- 
-
-            <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
-
-        
-            <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
-  
-            <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="content">
-                  <h2 class="title">OFS</h2>
-                  <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-                  <button class="btn">View Trips</button>
-                </div>
-              </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">Mans Suite Slim Fit</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
             </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <section class="product">
+        <h1>Women Products</h1>
+        <div class="cards">
+          <div class="card women-1">
+            <div class="content">
+              <h2 class="title">Mans Suite Slim Fit</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+
+          <div class="card women-2">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+
+          <div class="card women-3">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+
+          <div class="card women-4">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card women-5">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card women-6">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card women-7">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+          <div class="card women-8">
+            <div class="content">
+              <h2 class="title">OFS</h2>
+              <p class="copy">
+                Check out all of these gorgeous mountain trips with beautiful
+                views of, you guessed it, the mountains
+              </p>
+              <button class="btn">View Trips</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
-    <footer></footer>
+    <footer>
+      <div>
+        <span class="material-symbols-outlined">
+          call
+          </span>
+        <p>+998 (91) 407-50-00</p>
+      </div>
+      <div>
+        <span class="material-symbols-outlined">
+          location_on
+          </span>
+        <p>Узбекистан, Бухарская область, Бухара, ул. А.Гиждувани, 29</p>
+      </div>
+      <div>
+        <span class="material-symbols-outlined">
+          person
+          </span>
+        <p>Олим Фазилов</p>
+      </div>
+      
+    </footer>
   </body>
 </html>
