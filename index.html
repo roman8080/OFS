@@ -78,9 +78,28 @@
         background-color: black;
         height: 100vh;
         display: flex;
-
         padding: 0;
       }
+
+      @media (max-width: 600px) {
+        .about {
+          flex-direction: column;
+        }
+
+        footer {
+          flex-direction: column;
+        }
+
+        nav {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+ 
+
       .about h1 {
         color: wheat;
         font-size: 3rem;
@@ -231,11 +250,31 @@
         background-position: center;
       }
       .card.women-2:before {
-        background-image: url(https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/7717/70463/Jacket-Vest-Pants-2018-High-quality-Men-Suits-Fashion-grid-stripe-Men-s-Slim-Fit__71054.1602670899.jpg?c=2) !important;
+        background-image: url(https://png.pngtree.com/png-vector/20240827/ourmid/pngtree-blue-blazer-for-women-png-image_13456910.png) !important;
         background-position: center;
       }
       .card.women-3:before {
-        background-image: url(https://d2j6dbq0eux0bg.cloudfront.net/images/42740142/2778699589.jpg) !important; 
+        background-image: url(https://www.shutterstock.com/image-photo/portrait-successful-business-woman-suit-260nw-2160768987.jpg) !important; 
+        background-position: center;
+      }
+      .card.women-4:before {
+        background-image: url(https://img.freepik.com/premium-photo/professional-woman-smart-beige-suit-smiling-casually-bright-studio-isolated-white_660230-9353.jpg) !important;
+        background-position: center;
+      }
+      .card.women-5:before {
+        background-image: url(https://img.freepik.com/premium-photo/beautiful-asian-muslim-woman-model-formal-office-attire-posing-isolated-background-studio_343960-42172.jpg) !important;
+        background-position: center;
+      }
+      .card.women-6:before {
+        background-image: url(https://img.freepik.com/premium-photo/beautiful-asian-muslim-woman-model-formal-office-attire-posing-isolated-background-studio_343960-41882.jpg) !important; 
+        background-position: center;
+      }
+      .card.women-7:before {
+        background-image: url(https://img.freepik.com/premium-photo/beautiful-asian-muslim-woman-model-formal-office-attire-posing-isolated-background-studio_343960-42418.jpg) !important;
+        background-position: center;
+      }
+      .card.women-8:before {
+        background-image: url(https://img.freepik.com/premium-photo/portrait-young-smiling-muslim-businesswoman-wearing-suit-with-hijab-white-background-studio_33799-11617.jpg) !important; 
         background-position: center;
       }
 
@@ -401,6 +440,7 @@
       footer div p {
         letter-spacing: 2px;
       }
+
     </style>
   </head>
   <body>
@@ -554,7 +594,7 @@
         <div class="cards">
           <div class="card women-1">
             <div class="content">
-              <h2 class="title">Mans Suite Slim Fit</h2>
+              <h2 class="title">OFS</h2>
               <p class="copy">
                 Check out all of these gorgeous mountain trips with beautiful
                 views of, you guessed it, the mountains
